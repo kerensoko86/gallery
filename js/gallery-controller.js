@@ -37,3 +37,16 @@ function onRenderModal(id) {
     // $('.date').html(new Date(proj.publishedAt));
     $('li a').attr('href', proj.url);
 }
+
+function onContact() {
+    var $email = $('.email').val();
+    var $subject = $('.subject').val();
+    var $message = $('.message').val();
+
+    if (!$email || !$subject || !$message) return;
+
+    window.location.href = (`https://mail.google.com/mail/?view=cm&fs=1&to=${$email}.com&su=${$subject}&body=${$message}`);
+    var $email = '';
+    var $subject = '';
+    var $message = '';
+}
