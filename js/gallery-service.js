@@ -11,7 +11,7 @@ function _createProjects() {
                     id: 'books',
                     name: 'Books',
                     title: 'Find a good book easy',
-                    desc: 'Love to read? want to find a great book? come to shop at our store',
+                    desc: 'Love to read? want to find a great book? come to buy at our store',
                     url: 'https://kerensoko86.github.io/books/',
                     publishedAt: Date.now(),
                     labels: ['table', 'books']
@@ -28,27 +28,23 @@ function _createProjects() {
                 {
                     id: 'touchnums',
                     name: 'Touch-Nums',
-                    title: 'Find all the numbers without hitting the mines',
-                    desc: 'Play the classic puzzle game Minesweeper online for free. No download required. Can you uncover all the mines?',
-                    url: 'https: //kerensoko86.github.io/touchnums/',
+                    title: 'Touch Numbers in Order: Number Game ',
+                    desc: 'Touch Nums Game is a math game for free. Train your brain, perception and reaction skills!',
+                    url: ' https://kerensoko86.github.io/touchnums/',
                     publishedAt: Date.now(),
                     labels: ['keren']
                 },
                 {
                     id: 'inpicture',
                     name: 'In-Picture',
-                    title: 'Find all the numbers without hitting the mines',
-                    desc: 'Play the classic puzzle game Minesweeper online for free. No download required. Can you uncover all the mines?',
+                    title: 'Choose correctly - in picture',
+                    desc: 'Check if your intuition really works, do you know how to rad the situation? play now!',
                     url: 'https://kerensoko86.github.io/in-picture/',
                     publishedAt: Date.now(),
                     labels: ['keren']
                 }
             ]
             .map(_createProject)
-
-        // projects.map(function(proj) {
-        //     _createProject(proj.name)
-        // })
 
         saveToStorage('projects', projects);
     }

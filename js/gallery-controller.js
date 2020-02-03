@@ -15,7 +15,7 @@ function renderProjects() {
                     <i class="fa fa-plus fa-3x"></i>
                 </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/${project.id}.png" alt="">
+            <img class="img-fluid inside-img" src="img/portfolio/${project.id}.png" alt="">
         </a>
         <div class="portfolio-caption">
             <h4>'${project.name}'</h4>
@@ -27,17 +27,13 @@ function renderProjects() {
 }
 
 
-
-
-
 function onRenderModal(id) {
     var proj = getProject(id);
-    console.log(proj);
+
     $('.modal-content h2').text(proj.name);
     $('.item-intro').text(proj.title);
     $('.modal-content img').attr('src', `img/portfolio/${proj.id}.png`);
     $('.desc').text(proj.desc);
-    $('.date').html(new Date(proj.publishedAt) * 1000);
-    console.log(proj.url)
+    // $('.date').html(new Date(proj.publishedAt));
     $('li a').attr('href', proj.url);
 }
